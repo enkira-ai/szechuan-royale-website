@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500&family=IM+Fell+English:ital@0;1&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Noto Sans SC', sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Noto Sans SC', sans-serif;
+  line-height: 1.7;
+}
+
+/* Custom styles for the restaurant */
+.bg-parchment { background-color: #FDF6E3; }
+.bg-imperial { background-color: #C0181F; }
+.bg-ink { background-color: #1A1008; }
+.bg-gold { background-color: #D4A017; }
+.bg-bright-gold { background-color: #F5C842; }
+
+.text-imperial { color: #C0181F; }
+.text-gold { color: #D4A017; }
+.text-bright-gold { color: #F5C842; }
+.text-stone { color: #5C5C5C; }
+.text-ink { color: #1A1008; }
+
+.border-gold { border-color: #D4A017; }
+.border-imperial { border-color: #C0181F; }
+
+.font-serif { font-family: 'Noto Serif SC', serif; }
+.font-sans { font-family: 'Noto Sans SC', sans-serif; }
+.font-fell { font-family: 'IM Fell English', serif; }
+
+/* Decorative elements */
+.divider-gold {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D4A017, transparent);
+  margin: 1rem 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "✦";
+  color: #D4A017;
+  margin: 0 1rem;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.3);
+}
