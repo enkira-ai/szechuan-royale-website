@@ -1,0 +1,205 @@
+{
+  "restaurant": {
+    "name": "Szechuan Royale",
+    "tagline": "Authentic Szechuan Chinese Cuisine",
+    "address": "470 Schooleys Mountain Rd, Hackettstown, NJ 07840",
+    "phone": ["908-850-4558", "908-850-6062"],
+    "hours": {
+      "mon": "Closed",
+      "tueSun": "11:30 AM - 9:00 PM"
+    },
+    "orderUrl": "https://order.mealkeyway.com/merchant/697a4f754551584c38385230584f427631595a526e413d3d/main",
+    "grubhubUrl": "https://www.grubhub.com/restaurant/szechuan-royale-470-schooleys-mountain-rd-ste-3-hackettstown/402532",
+    "seamlessUrl": "https://www.seamless.com/menu/szechuan-royale-470-schooleys-mountain-rd-ste-3-hackettstown/402532",
+    "facebook": "https://www.facebook.com/szechuanroyale/",
+    "yelp": "https://www.yelp.com/biz/szechuan-royale-hackettstown-2"
+  },
+  "categories": [
+    {
+      "name": "House Special",
+      "items": [
+        { "name": "Sesame Chicken", "price": 15.00, "popular": true, "description": "Sliced chicken sauteed in our chef's special sesame sauce." },
+        { "name": "General Tso's Chicken", "price": 14.00, "popular": true, "description": "Chunks of chicken sauteed in our chef's special sauce." },
+        { "name": "Orange Flavored Chicken", "price": 14.00, "description": "Chicken, cut in large chunks, then marinated & quickly fried w.chef's golden chili & orange sauce." },
+        { "name": "Lemon Chicken", "price": 14.00, "description": "Boneless chicken w.lemon sauce." },
+        { "name": "House Chicken", "price": 14.00, "description": "Special sauce accompanies batter fried chicken breast dish. Fine shreds of scallions make its tangy sauce superb." },
+        { "name": "Prawn Chicken, Hunan Style", "price": 15.00, "description": "Prawns & tender morsels of chicken first marinated, then sauteed w.variety of vegetables in chef's special Hunan sauce." },
+        { "name": "Sizzling Beef w.Scallops", "price": 17.00, "description": "Beef & scallops w.vegetables on a sizzling platter w.oyster sauce." },
+        { "name": "Beef w.Orange Flavor", "price": 16.00, "description": "Sliced beef sauteed w.a specially flavored chili & orange sauce." },
+        { "name": "Perfect Match", "price": 16.50, "description": "Chunks of beef steak & prawns in our chef's special sauce." },
+        { "name": "Capital Chicken", "price": 14.00, "description": "White meat chicken w.mushrooms & watercress house special hot sauce." },
+        { "name": "Happy Family", "price": 15.00, "description": "Shrimp, beef, chicken & pork w.mixed vegetables in a brown sauce." },
+        { "name": "Triple Delight", "price": 15.00, "description": "Sliced beef, chicken & jumbo shrimp sauteed w.Chinese vegetables in brown sauce, over silver noodles." },
+        { "name": "Eggplant w.Shrimp Scallop", "price": 17.00, "description": "In a house special sauce." },
+        { "name": "Fruits Of The Sea", "price": 17.00, "description": "Harmony of seafood w.snow pea pods, broccoli, mushrooms, water chestnuts on a sizzling platter." },
+        { "name": "Crispy Duck", "price": 19.00 },
+        { "name": "Tung Ting Shrimp", "price": 15.50, "description": "Traditionally a banquet dish. Sliced jumbo shrimp sauteed w.mixed vegetables in delicious egg white sauce." },
+        { "name": "White Meat General Tso's Chicken", "price": 15.00 }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "items": [
+        { "name": "Pu Pu Platter", "price": 19.00 },
+        { "name": "Steamed Dumplings (6)", "price": 9.00, "popular": true },
+        { "name": "Pan Fried Dumplings (6)", "price": 9.00, "popular": true },
+        { "name": "Fried Shrimp Dumplings (6)", "price": 8.00, "popular": true },
+        { "name": "Spring Roll (1)", "price": 2.00, "popular": true },
+        { "name": "Barbecued Spare Rib", "price": 12.50 },
+        { "name": "Barbecued Beef (4)", "price": 9.00, "popular": true },
+        { "name": "Wonton Spicy Sesame Sauce (10)", "price": 9.00 },
+        { "name": "Cold Noodles Spicy Sauce", "price": 8.50 },
+        { "name": "Boneless Spare Ribs", "price": 12.50, "popular": true },
+        { "name": "Fried Wonton", "price": 9.00 },
+        { "name": "Wings", "price": 8.00 },
+        { "name": "Scallion Pancake", "price": 7.00, "popular": true }
+      ]
+    },
+    {
+      "name": "Soup",
+      "items": [
+        { "name": "Wonton Soup", "price": 3.50, "popular": true },
+        { "name": "Egg Drop Soup", "price": 3.50 },
+        { "name": "Hot & Sour Soup", "price": 3.50 },
+        { "name": "Bean Curd Veg Soup (for 2)", "price": 7.00 },
+        { "name": "House Special Soup (for 2)", "price": 10.00 },
+        { "name": "Shred Pork Pickled Cabbage (for 2)", "price": 8.00 },
+        { "name": "Egg Drop Wonton Soup", "price": 3.50 },
+        { "name": "Chicken Noodle Soup", "price": 2.50 },
+        { "name": "Chicken Rice Soup", "price": 2.50 }
+      ]
+    },
+    {
+      "name": "Poultry",
+      "items": [
+        { "name": "Sweet & Sour Chicken", "price": 13.50, "popular": true },
+        { "name": "Moo Goo Gai Pan", "price": 13.50 },
+        { "name": "Diced Chicken w.Cashew Nut", "price": 13.50 },
+        { "name": "Curry Chicken", "price": 13.50 },
+        { "name": "Diced Chicken w.Peanut", "price": 13.50 },
+        { "name": "Sliced Chicken w.Broccoli", "price": 13.50, "popular": true },
+        { "name": "Sliced Chicken w.Snow Peas", "price": 13.50 },
+        { "name": "Diced Chicken w.Peking Sauce", "price": 13.50 },
+        { "name": "Hunan Chicken", "price": 13.50 },
+        { "name": "Chicken & Shrimp Combo", "price": 13.50 },
+        { "name": "Sliced Chicken w.Garlic Sauce", "price": 13.50 },
+        { "name": "Moo Shu Chicken", "price": 13.50, "description": "4 Pancakes" },
+        { "name": "Chicken Mixed Vegetable", "price": 13.50 },
+        { "name": "Szechuan Chicken", "price": 13.50 },
+        { "name": "Honey Chicken", "price": 13.50 },
+        { "name": "Pepper Chicken", "price": 13.50 }
+      ]
+    },
+    {
+      "name": "Seafood",
+      "items": [
+        { "name": "Shrimp w.Lobster Sauce", "price": 15.00 },
+        { "name": "Shrimp w.Peanut", "price": 15.00 },
+        { "name": "Shrimp w.Cashew Nuts", "price": 15.00 },
+        { "name": "Prawns w.Snow Pea", "price": 15.00 },
+        { "name": "Prawns w.Black Bean Sauce", "price": 15.00 },
+        { "name": "Prawns w.Garlic Sauce", "price": 15.00 },
+        { "name": "Scallops w.Garlic Sauce", "price": 16.50 },
+        { "name": "Scallops w.Vegetable", "price": 16.50 },
+        { "name": "Prawns w.Broccoli", "price": 15.00 },
+        { "name": "Hunan Prawn", "price": 15.00 },
+        { "name": "Butterfly Shrimp", "price": 15.00 },
+        { "name": "Sweet & Sour Shrimp", "price": 15.00 }
+      ]
+    },
+    {
+      "name": "Pork",
+      "items": [
+        { "name": "Moo Shu Pork", "price": 13.50, "description": "4 Pancakes" },
+        { "name": "Shred Pork w.Peking Sauce", "price": 13.50 },
+        { "name": "Shred Pork w.Garlic Sauce", "price": 13.50 },
+        { "name": "Sliced Pork w.Scallion", "price": 13.50 },
+        { "name": "Sliced Pork w.Broccoli", "price": 13.50 },
+        { "name": "Hunan Pork", "price": 13.50 },
+        { "name": "Sliced Pork w.Snow Pea", "price": 13.50 }
+      ]
+    },
+    {
+      "name": "Beef",
+      "items": [
+        { "name": "Pepper Steak", "price": 15.00 },
+        { "name": "Beef w.Broccoli", "price": 15.00, "popular": true },
+        { "name": "Hunan Beef", "price": 15.00 },
+        { "name": "Beef w.Snow Peas", "price": 15.00 },
+        { "name": "Shredded Beef w.Peanuts", "price": 15.00 },
+        { "name": "Shred Beef w.Garlic Sauce", "price": 15.00 },
+        { "name": "Sliced Beef w.Black Bean Sauce", "price": 15.00 },
+        { "name": "Sliced Beef w.Scallion", "price": 15.00 },
+        { "name": "Sliced Beef Oyster Sauce", "price": 15.00 }
+      ]
+    },
+    {
+      "name": "Vegetable",
+      "items": [
+        { "name": "Vegetable Delight", "price": 11.50 },
+        { "name": "Saute Snow Peas", "price": 11.50 },
+        { "name": "Sauteed String Beans w.Meat", "price": 11.50 },
+        { "name": "Broccoli w.Garlic Sauce", "price": 11.50 },
+        { "name": "Eggplant w.Garlic Sauce", "price": 11.50 },
+        { "name": "Bean Curd w.Mixed Veg", "price": 11.50 },
+        { "name": "Szechuan Spicy Bean Curd", "price": 11.50 },
+        { "name": "General Tso's Tofu", "price": 13.00 },
+        { "name": "Eggplant Chicken", "price": 13.50 },
+        { "name": "String Bean Chicken", "price": 13.50 },
+        { "name": "String Bean Beef", "price": 15.00 }
+      ]
+    },
+    {
+      "name": "Noodle / Fried Rice / Chow Mein",
+      "items": [
+        { "name": "Fried Rice (Any Style)", "price": 11.25, "popular": true, "description": "Chicken, shrimp, beef, pork or vegetable" },
+        { "name": "House Special Fried Rice", "price": 12.00 },
+        { "name": "Lo Mein (Any Style)", "price": 11.25, "popular": true, "description": "Chicken, shrimp, beef, pork or vegetable" },
+        { "name": "House Special Lo Mein", "price": 12.00 },
+        { "name": "Chow Mein (Any Style)", "price": 11.25, "description": "Chicken, shrimp, beef, pork or vegetable" },
+        { "name": "House Special Chow Mein", "price": 12.00 },
+        { "name": "Mein Fun (Any Style)", "price": 12.00, "description": "Chicken, shrimp, beef, pork or vegetable" },
+        { "name": "House Special Mein Fun", "price": 13.00 }
+      ]
+    },
+    {
+      "name": "Combo Platters",
+      "note": "Served with fried rice & egg roll",
+      "items": [
+        { "name": "Chicken w.Broccoli", "price": 11.25, "popular": true },
+        { "name": "Sweet & Sour Chicken", "price": 11.25 },
+        { "name": "Moo Goo Gai Pan", "price": 11.25 },
+        { "name": "Chicken w.Cashew Nuts", "price": 11.25 },
+        { "name": "Hunan Chicken", "price": 11.25 },
+        { "name": "General Tso's Chicken", "price": 12.50, "popular": true },
+        { "name": "Shrimp w.Lobster Sauce", "price": 12.50 },
+        { "name": "Pepper Steak", "price": 12.50 },
+        { "name": "Beef w.Broccoli", "price": 12.50 },
+        { "name": "Barbecued Spare Ribs", "price": 14.00 },
+        { "name": "Boneless Rib", "price": 14.00 },
+        { "name": "Chicken Garlic Sauce", "price": 11.25 },
+        { "name": "Hunan Beef", "price": 12.50 }
+      ]
+    },
+    {
+      "name": "Lunch Special",
+      "note": "Mon closed. Tue-Sun 11:30AM-9:00PM",
+      "items": [
+        { "name": "Sweet & Sour Chicken", "price": 8.00 },
+        { "name": "Moo Goo Gai Pan", "price": 8.00 },
+        { "name": "Chicken w.Cashew Nuts", "price": 8.00 },
+        { "name": "Chicken w.Broccoli", "price": 8.00, "popular": true },
+        { "name": "Hunan Chicken", "price": 8.00 },
+        { "name": "General Tso's Chicken", "price": 8.25 },
+        { "name": "Pepper Steak", "price": 8.50 },
+        { "name": "Beef w.Broccoli", "price": 8.50 },
+        { "name": "Hunan Beef", "price": 8.50 },
+        { "name": "Prawns w.Lobster Sauce", "price": 8.75 },
+        { "name": "Prawns w.Broccoli", "price": 8.75 },
+        { "name": "Hunan Prawn", "price": 8.75 },
+        { "name": "Lo Mein", "price": 8.00 },
+        { "name": "Chow Mein", "price": 8.00 }
+      ]
+    }
+  ]
+}

@@ -1,118 +1,93 @@
-import Image from "next/image";
+import menuData from '../../data/menu.json';
+
+const FEATURED_CATEGORIES = ['House Special', 'Appetizers', 'Poultry', 'Seafood', 'Noodle / Fried Rice / Chow Mein'];
+
+const SPICE_MAP: Record<string, number> = {
+  'Sesame Chicken': 1,
+  "General Tso's Chicken": 2,
+  'Orange Flavored Chicken': 1,
+  'Hunan Chicken': 3,
+  'Szechuan Chicken': 3,
+  'Hot & Sour Soup': 2,
+  'Hunan Beef': 3,
+  'Pepper Steak': 1,
+};
 
 export default function MenuHighlights() {
-  const dishes = [
-    {
-      name: "Mapo Tofu",
-      price: "$14",
-      description: "Silken tofu in fiery Szechuan sauce with ground pork",
-      spice: 3,
-      image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
-    },
-    {
-      name: "Dan Dan Noodles",
-      price: "$13",
-      description: "Spicy sesame noodles with preserved vegetables",
-      spice: 2,
-      image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=300&fit=crop",
-    },
-    {
-      name: "Kung Pao Chicken",
-      price: "$15",
-      description: "Chicken with peanuts, vegetables in spicy garlic sauce",
-      spice: 2,
-      image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop",
-    },
-    {
-      name: "Twice Cooked Pork",
-      price: "$16",
-      description: "Stir-fried pork belly with bell peppers and onions",
-      spice: 3,
-      image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop",
-    },
-    {
-      name: "Hot Pot",
-      price: "$18",
-      description: "Rich broth with assorted meats and vegetables",
-      spice: 3,
-      image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
-    },
-    {
-      name: "Szechuan Beef",
-      price: "$17",
-      description: "Tender beef with green beans in spicy sauce",
-      spice: 3,
-      image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop",
-    },
-  ];
+  const featured = menuData.categories.filter(c => FEATURED_CATEGORIES.includes(c.name));
 
   return (
-    <section id="menu" className="py-16 bg-parchment">
+    <section id="menu" className="py-20 bg-ink-warm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-12 fade-in">
-          <h2 className="font-serif text-3xl md:text-4xl text-ink mb-4">
-            SIGNATURE DISHES
+        <div className="text-center mb-14">
+          <p className="text-gold uppercase tracking-[0.3em] text-sm mb-3">Our Cuisine</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
+            The Full Menu
           </h2>
-          <div className="flex items-center justify-center space-x-4">
-            <span className="text-2xl text-gold">✦</span>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-            <span className="text-2xl text-gold">✦</span>
+          <div className="flex items-center justify-center gap-4">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent to-gold"></div>
+            <span className="text-imperial text-xl">🌶</span>
+            <div className="w-16 h-px bg-gradient-to-l from-transparent to-gold"></div>
           </div>
+          <p className="text-stone mt-4 text-sm">
+            <a href={menuData.restaurant.orderUrl} target="_blank" rel="noopener noreferrer"
+               className="text-gold hover:text-gold-bright underline transition-colors">
+              Order online for pickup →
+            </a>
+          </p>
         </div>
 
-        {/* Menu Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {dishes.map((dish, index) => (
-            <div
-              key={index}
-              className="bg-ink rounded-lg overflow-hidden border-2 border-gold hover-glow transition-all duration-300 transform hover:scale-105 fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Dish Image */}
-              <div className="relative h-48">
-                <Image
-                  src={dish.image}
-                  alt={dish.name}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute top-2 right-2 bg-imperial text-white px-2 py-1 rounded-full text-xs font-medium">
-                  {dish.spice > 2 && "🌶"} {dish.spice > 1 && "🌶"} {dish.spice > 0 && "🌶"}
-                </div>
-              </div>
-
-              {/* Dish Info */}
-              <div className="p-6">
-                <h3 className="font-serif text-xl text-white mb-2">{dish.name}</h3>
-                <p className="text-stone text-sm mb-3">{dish.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="font-sans text-gold text-lg font-medium">
-                    {dish.price}
-                  </span>
-                  <a
-                    href="#order"
-                    className="text-gold hover:text-bright-gold text-sm font-medium"
+        <div className="space-y-12">
+          {featured.map((category) => (
+            <div key={category.name}>
+              <h3 className="font-serif text-2xl text-gold border-b border-gold/30 pb-2 mb-6">
+                {category.name}
+                {category.note && <span className="text-sm text-stone ml-3 font-sans font-normal">— {category.note}</span>}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {category.items.map((item) => (
+                  <div key={item.name}
+                    className={`flex justify-between items-start p-4 rounded border transition-all duration-200 hover:border-gold/60 ${
+                      item.popular
+                        ? 'bg-imperial/10 border-imperial/40'
+                        : 'bg-ink/40 border-white/10'
+                    }`}
                   >
-                    Order Now →
-                  </a>
-                </div>
+                    <div className="flex-1 min-w-0 pr-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-white font-medium text-sm leading-tight">{item.name}</span>
+                        {item.popular && (
+                          <span className="shrink-0 bg-imperial text-white text-[10px] px-1.5 py-0.5 rounded uppercase tracking-wide">Popular</span>
+                        )}
+                      </div>
+                      {'description' in item && item.description && (
+                        <p className="text-stone text-xs mt-1 leading-relaxed">{item.description}</p>
+                      )}
+                    </div>
+                    <span className="text-gold font-semibold text-sm whitespace-nowrap">${item.price.toFixed(2)}</span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* View Full Menu Button */}
-        <div className="text-center mt-12 fade-in">
+        <div className="mt-12 text-center">
           <a
-            href="#order"
-            className="inline-flex items-center bg-gold text-ink px-8 py-3 rounded-lg font-medium hover:bg-bright-gold transition-all duration-200 transform hover:scale-105"
+            href={menuData.restaurant.orderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-imperial text-white px-10 py-4 rounded font-medium text-lg hover:bg-red-700 transition-colors border-2 border-gold/50 hover:border-gold"
           >
-            View Full Menu
-            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            Order Online Now →
           </a>
+          <div className="mt-4 flex gap-4 justify-center">
+            <a href={menuData.restaurant.grubhubUrl} target="_blank" rel="noopener noreferrer"
+               className="text-stone hover:text-gold text-sm transition-colors">Grubhub</a>
+            <span className="text-stone/30">|</span>
+            <a href={menuData.restaurant.seamlessUrl} target="_blank" rel="noopener noreferrer"
+               className="text-stone hover:text-gold text-sm transition-colors">Seamless</a>
+          </div>
         </div>
       </div>
     </section>

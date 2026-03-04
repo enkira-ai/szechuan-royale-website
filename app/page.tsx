@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import MenuHighlights from "./components/MenuHighlights";
 import OnlineOrderingBanner from "./components/OnlineOrderingBanner";
 import About from "./components/About";
+import Gallery from "./components/Gallery";
 import LocationHours from "./components/LocationHours";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <MenuHighlights />
+        <Gallery />
         <OnlineOrderingBanner />
         <About />
         <LocationHours />
