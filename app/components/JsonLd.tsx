@@ -8,18 +8,16 @@ export default function JsonLd() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Szechuan Street",
-      addressLocality: "New York",
-      addressRegion: "NY",
-      postalCode: "10001",
+      streetAddress: "470 Schooleys Mountain Rd",
+      addressLocality: "Hackettstown",
+      addressRegion: "NJ",
+      postalCode: "07840",
       addressCountry: "US",
     },
-    telephone: "(555) 123-4567",
-    url: "https://szechuanroyale.com",
+    telephone: "(908) 850-4558",
+    url: "https://szechuanroyalechinese.com",
     openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "11:00", closes: "21:30" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Friday", "Saturday"], opens: "11:00", closes: "22:30" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "12:00", closes: "21:30" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "11:30", closes: "21:00" },
     ],
   };
 

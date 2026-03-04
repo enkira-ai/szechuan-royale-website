@@ -1,17 +1,15 @@
 export default function LocationHours() {
   const location = {
-    address: "123 Szechuan Street, Downtown",
-    city: "New York, NY 10001",
-    phone: "(555) 123-4567",
-    email: "info@szechuanroyale.com",
+    address: "470 Schooleys Mountain Rd",
+    city: "Hackettstown, NJ 07840",
+    phone: "(908) 850-4558",
     hours: [
-      { day: "Mon–Thu", time: "11am – 9:30pm" },
-      { day: "Fri–Sat", time: "11am – 10:30pm" },
-      { day: "Sunday", time: "12pm – 9:30pm" },
+      { day: "Monday", time: "Closed" },
+      { day: "Tue–Sun", time: "11:30am – 9:00pm" },
     ],
   };
 
-  const mapsUrl = "https://maps.google.com/maps?q=123+Szechuan+Street,+New+York,+NY+10001";
+  const mapsUrl = "https://maps.google.com/maps?q=470+Schooleys+Mountain+Rd,+Hackettstown,+NJ+07840";
 
   return (
     <section id="location" className="py-16 bg-parchment">
@@ -36,17 +34,10 @@ export default function LocationHours() {
               <p className="font-sans text-lg mb-2">{location.address}</p>
               <p className="font-sans text-lg mb-4">{location.city}</p>
               
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center space-x-2">
                 <span className="text-xl">📞</span>
                 <a href={`tel:${location.phone}`} className="text-bright-gold hover:text-gold">
                   {location.phone}
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-2">
-                <span className="text-xl">✉️</span>
-                <a href={`mailto:${location.email}`} className="text-bright-gold hover:text-gold">
-                  {location.email}
                 </a>
               </div>
             </div>
@@ -82,7 +73,7 @@ export default function LocationHours() {
           <div className="bg-white rounded-lg overflow-hidden border-2 border-gold">
             <div className="aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.241267509699!2d-74.00369308459418!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.2!2d-74.8380!3d40.8520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s470+Schooleys+Mountain+Rd+Hackettstown+NJ!5e0!3m2!1sen!2sus!4v1741055432000"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

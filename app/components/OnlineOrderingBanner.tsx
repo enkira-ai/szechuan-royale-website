@@ -1,5 +1,5 @@
 export default function OnlineOrderingBanner() {
-  const orderUrl = process.env.NEXT_PUBLIC_ORDER_URL || "#order";
+  const orderUrl = "https://order.mealkeyway.com/merchant/697a4f754551584c38385230584f427631595a526e413d3d/main";
 
   return (
     <section className="py-12 bg-imperial">

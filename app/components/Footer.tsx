@@ -7,7 +7,7 @@ export default function Footer() {
             🏮 SZECHUAN ROYALE
           </h3>
           <p className="text-gold mb-4">Authentic Chinese Restaurant</p>
-          <p className="text-sm mb-6">123 Szechuan Street, Downtown, New York, NY 10001</p>
+          <p className="text-sm mb-6">470 Schooleys Mountain Rd, Hackettstown, NJ 07840</p>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
