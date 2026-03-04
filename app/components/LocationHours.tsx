@@ -17,7 +17,7 @@ export default function LocationHours() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl text-ink mb-4">
-            📍 FIND US
+            FIND US
           </h2>
           <div className="flex items-center justify-center space-x-4">
             <span className="text-2xl text-gold">✦</span>
@@ -35,7 +35,7 @@ export default function LocationHours() {
               <p className="font-sans text-lg mb-4">{location.city}</p>
               
               <div className="flex items-center space-x-2">
-                <span className="text-xl">📞</span>
+                <span className="text-xl"></span>
                 <a href={`tel:${location.phone}`} className="text-bright-gold hover:text-gold">
                   {location.phone}
                 </a>
@@ -44,7 +44,7 @@ export default function LocationHours() {
 
             {/* Hours */}
             <div className="bg-ink rounded-lg p-6 text-white">
-              <h3 className="font-serif text-2xl text-gold mb-4">⏰ Hours</h3>
+              <h3 className="font-serif text-2xl text-gold mb-4">Hours</h3>
               <div className="space-y-2">
                 {location.hours.map((hour, index) => (
                   <div key={index} className="flex justify-between font-sans text-lg">
@@ -69,20 +69,18 @@ export default function LocationHours() {
             </a>
           </div>
 
-          {/* Google Maps Embed */}
-          <div className="bg-white rounded-lg overflow-hidden border-2 border-gold">
-            <div className="aspect-video">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.2!2d-74.8380!3d40.8520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s470+Schooleys+Mountain+Rd+Hackettstown+NJ!5e0!3m2!1sen!2sus!4v1741055432000"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Szechuan Royale Location"
-              />
-            </div>
+          {/* Google Maps Link */}
+          <div className="bg-ink-warm rounded-lg overflow-hidden border-2 border-gold flex flex-col items-center justify-center p-10 gap-6" style={{ minHeight: "300px" }}>
+            <p className="font-serif text-2xl text-gold text-center">Szechuan Royale</p>
+            <p className="text-cream/70 text-center">470 Schooleys Mountain Rd<br/>Hackettstown, NJ 07840</p>
+            <a
+              href="https://maps.google.com/?q=470+Schooleys+Mountain+Rd+Hackettstown+NJ+07840"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gold text-ink px-6 py-3 rounded-lg font-medium hover:bg-bright-gold transition-all duration-200"
+            >
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </div>

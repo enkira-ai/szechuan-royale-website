@@ -1,6 +1,3 @@
-'use client';
-import Image from 'next/image';
-
 const photos = [
   'cda83e56-8acf-467e-b60a-68db04ccd765.jpeg',
   'd23e3903-fe25-417b-bfa9-90e4be70ef4f.jpeg',
@@ -31,15 +28,19 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {photos.map((photo, i) => (
-            <div key={i} className="break-inside-avoid relative overflow-hidden rounded group border border-gold/20 hover:border-gold/60 transition-all duration-300">
-              <Image
+            <div
+              key={i}
+              className="relative overflow-hidden rounded border border-gold/20 hover:border-gold/60 transition-all duration-300 group"
+              style={{ aspectRatio: '4/3' }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={`/images/${photo}`}
                 alt={`Szechuan Royale dish ${i + 1}`}
-                width={400}
-                height={300}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-imperial/0 group-hover:bg-imperial/20 transition-all duration-300" />
             </div>

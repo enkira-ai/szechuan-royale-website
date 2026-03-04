@@ -10,6 +10,7 @@ module.exports = {
         'imperial-dk': '#8B0000',
         gold:      '#D4AF37',
         'gold-bright': '#F0C040',
+        'bright-gold': '#F0C040',
         'gold-dim': 'rgba(212,175,55,0.3)',
         ink:       '#0d0806',
         'ink-warm': '#1a0e08',
