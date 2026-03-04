@@ -40,7 +40,7 @@ export default function Gallery() {
                 src={`/images/${photo}`}
                 alt={`Szechuan Royale dish ${i + 1}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                loading={i < 6 ? 'eager' : 'lazy'}
               />
               <div className="absolute inset-0 bg-imperial/0 group-hover:bg-imperial/20 transition-all duration-300" />
             </div>
