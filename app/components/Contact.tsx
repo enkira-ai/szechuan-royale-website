@@ -15,7 +15,7 @@ export default function Contact() {
     <section id="contact" className="py-16 bg-parchment">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl text-ink mb-4">📞 CONTACT US</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-ink mb-4">CONTACT US</h2>
           <div className="flex items-center justify-center space-x-4">
             <span className="text-2xl text-gold">✦</span>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
@@ -25,8 +25,7 @@ export default function Contact() {
 
         <div className="text-center mb-8 space-y-2">
           <p className="text-lg">
-            <span className="text-xl">📞</span>{" "}
-            <a href="tel:5551234567" className="text-imperial hover:text-gold">(555) 123-4567</a>
+            <a href="tel:9088504558" className="text-imperial hover:text-gold">(908) 850-4558</a>
           </p>
           <p className="text-lg">
             <span className="text-xl">✉️</span>{" "}
