@@ -15,34 +15,35 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 bg-ink">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-3">
-            Our Kitchen
-          </h2>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-20 h-px bg-gold"></div>
-            <span className="text-gold text-2xl">✦</span>
-            <div className="w-20 h-px bg-gold"></div>
-          </div>
+    <section id="gallery" className="py-24 bg-ink">
+      <div className="max-w-6xl mx-auto px-6">
+
+        {/* Section Header */}
+        <div className="text-center mb-14">
+          <span className="section-eyebrow">From Our Kitchen</span>
+          <h2 className="section-title text-4xl md:text-5xl mb-4">Gallery</h2>
+          <div className="section-rule section-rule-center" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '0.5rem',
+        }}>
           {photos.map((photo, i) => (
             <div
               key={i}
-              className="relative overflow-hidden rounded border border-gold/20 hover:border-gold/60 transition-all duration-300 group"
+              className="gallery-item gallery-frame"
               style={{ aspectRatio: '4/3' }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`/images/${photo}`}
                 alt={`Szechuan Royale dish ${i + 1}`}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading={i < 6 ? 'eager' : 'lazy'}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                loading={i < 8 ? 'eager' : 'lazy'}
               />
-              <div className="absolute inset-0 bg-imperial/0 group-hover:bg-imperial/20 transition-all duration-300" />
+              <div className="gallery-overlay" />
             </div>
           ))}
         </div>

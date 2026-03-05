@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans bg-parchment">
+      <body className="font-sans bg-ink">
         {children}
       </body>
     </html>

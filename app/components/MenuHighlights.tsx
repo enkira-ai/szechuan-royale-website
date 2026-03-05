@@ -13,80 +13,143 @@ const SPICE_MAP: Record<string, number> = {
   'Pepper Steak': 1,
 };
 
+function SpiceDots({ level }: { level: number }) {
+  return (
+    <span style={{ display: 'inline-flex', gap: '2px', alignItems: 'center', marginLeft: '4px' }}>
+      {[1,2,3].map(i => (
+        <span
+          key={i}
+          style={{
+            display: 'inline-block',
+            width: '5px',
+            height: '5px',
+            borderRadius: '50%',
+            background: i <= level ? '#CC1100' : 'rgba(204,17,0,0.15)',
+          }}
+        />
+      ))}
+    </span>
+  );
+}
+
 export default function MenuHighlights() {
   const featured = menuData.categories.filter(c => FEATURED_CATEGORIES.includes(c.name));
 
   return (
-    <section id="menu" className="py-20 bg-ink-warm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-gold uppercase tracking-[0.3em] text-sm mb-3">Our Cuisine</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            The Full Menu
-          </h2>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-gold"></div>
-            <span className="text-imperial text-xl">🌶</span>
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-gold"></div>
-          </div>
-          <p className="text-stone mt-4 text-sm">
-            <a href={menuData.restaurant.orderUrl} target="_blank" rel="noopener noreferrer"
-               className="text-gold hover:text-gold-bright underline transition-colors">
+    <section id="menu" className="py-24 bg-ink-warm">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="section-eyebrow">Our Cuisine</span>
+          <h2 className="section-title text-4xl md:text-5xl mb-4">The Menu</h2>
+          <div className="section-rule section-rule-center" />
+          <p className="text-stone text-sm mt-6" style={{ letterSpacing: '0.05em' }}>
+            <a href={menuData.restaurant.orderUrl} target="_blank" rel="noopener noreferrer" className="link-gold">
               Order online for pickup →
             </a>
           </p>
         </div>
 
-        <div className="space-y-12">
+        {/* Categories */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
           {featured.map((category) => (
             <div key={category.name}>
-              <h3 className="font-serif text-2xl text-gold border-b border-gold/30 pb-2 mb-6">
-                {category.name}
-                {category.note && <span className="text-sm text-stone ml-3 font-sans font-normal">— {category.note}</span>}
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {category.items.map((item) => (
-                  <div key={item.name}
-                    className={`flex justify-between items-start p-4 rounded border transition-all duration-200 hover:border-gold/60 ${
-                      item.popular
-                        ? 'bg-imperial/10 border-imperial/40'
-                        : 'bg-ink/40 border-white/10'
-                    }`}
-                  >
-                    <div className="flex-1 min-w-0 pr-3">
-                      <div className="flex items-center gap-2">
-                        <span className="text-white font-medium text-sm leading-tight">{item.name}</span>
-                        {item.popular && (
-                          <span className="shrink-0 bg-imperial text-white text-[10px] px-1.5 py-0.5 rounded uppercase tracking-wide">Popular</span>
+              {/* Category header */}
+              <div style={{ marginBottom: '1.25rem', paddingBottom: '0.75rem', borderBottom: '1px solid rgba(212,175,55,0.15)' }}>
+                <h3 style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontWeight: 700,
+                  fontSize: '1.375rem',
+                  color: '#D4AF37',
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  gap: '0.75rem',
+                }}>
+                  {category.name}
+                  {category.note && (
+                    <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: '0.75rem', color: '#8A7968', fontWeight: 400, letterSpacing: '0.03em' }}>
+                      {category.note}
+                    </span>
+                  )}
+                </h3>
+              </div>
+
+              {/* Items grid */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))', gap: '0.625rem' }}>
+                {category.items.map((item) => {
+                  const spice = SPICE_MAP[item.name] ?? 0;
+                  const isPopular = item.popular;
+                  return (
+                    <div
+                      key={item.name}
+                      className={isPopular ? 'menu-card menu-card-popular' : 'menu-card'}
+                      style={{ padding: '0.875rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.75rem' }}
+                    >
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                          <span style={{
+                            fontFamily: "'Noto Sans SC', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '0.875rem',
+                            color: '#F5E6C8',
+                            lineHeight: 1.4,
+                          }}>
+                            {item.name}
+                          </span>
+                          {spice > 0 && <SpiceDots level={spice} />}
+                          {isPopular && (
+                            <span style={{
+                              background: 'rgba(204,17,0,0.22)',
+                              border: '1px solid rgba(204,17,0,0.38)',
+                              color: '#F0C040',
+                              fontSize: '0.58rem',
+                              padding: '1px 6px',
+                              letterSpacing: '0.08em',
+                              textTransform: 'uppercase',
+                              fontFamily: "'Noto Sans SC', sans-serif",
+                              flexShrink: 0,
+                            }}>
+                              Popular
+                            </span>
+                          )}
+                        </div>
+                        {'description' in item && item.description && (
+                          <p style={{ color: '#8A7968', fontSize: '0.75rem', marginTop: '0.25rem', lineHeight: 1.5 }}>
+                            {item.description}
+                          </p>
                         )}
                       </div>
-                      {'description' in item && item.description && (
-                        <p className="text-stone text-xs mt-1 leading-relaxed">{item.description}</p>
-                      )}
+                      <span className="price-tag" style={{ flexShrink: 0 }}>
+                        ${item.price.toFixed(2)}
+                      </span>
                     </div>
-                    <span className="text-gold font-semibold text-sm whitespace-nowrap">${item.price.toFixed(2)}</span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* Bottom CTA */}
+        <div style={{ marginTop: '3.5rem', textAlign: 'center' }}>
           <a
             href={menuData.restaurant.orderUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-imperial text-white px-10 py-4 rounded font-medium text-lg hover:bg-red-700 transition-colors border-2 border-gold/50 hover:border-gold"
+            className="btn-crimson"
+            style={{ padding: '0.9rem 2.5rem', fontSize: '0.875rem' }}
           >
-            Order Online Now →
+            Order Online Now
           </a>
-          <div className="mt-4 flex gap-4 justify-center">
-            <a href={menuData.restaurant.grubhubUrl} target="_blank" rel="noopener noreferrer"
-               className="text-stone hover:text-gold text-sm transition-colors">Grubhub</a>
-            <span className="text-stone/30">|</span>
-            <a href={menuData.restaurant.seamlessUrl} target="_blank" rel="noopener noreferrer"
-               className="text-stone hover:text-gold text-sm transition-colors">Seamless</a>
+          <div style={{ marginTop: '1.25rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
+            <a href={menuData.restaurant.grubhubUrl} target="_blank" rel="noopener noreferrer" className="link-stone" style={{ fontSize: '0.8rem' }}>
+              Grubhub
+            </a>
+            <span style={{ color: 'rgba(138,121,104,0.3)', fontSize: '0.6rem' }}>◆</span>
+            <a href={menuData.restaurant.seamlessUrl} target="_blank" rel="noopener noreferrer" className="link-stone" style={{ fontSize: '0.8rem' }}>
+              Seamless
+            </a>
           </div>
         </div>
       </div>
