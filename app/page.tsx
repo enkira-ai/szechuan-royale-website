@@ -1,4 +1,5 @@
 import Navigation from "./components/Navigation";
+import FloatingOrderButton from "./components/FloatingOrderButton";
 import Hero from "./components/Hero";
 import MenuHighlights from "./components/MenuHighlights";
 import OnlineOrderingBanner from "./components/OnlineOrderingBanner";
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <FloatingOrderButton />
     </>
   );
 }
