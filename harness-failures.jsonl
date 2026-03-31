@@ -1,0 +1,1 @@
+{"ts":"2026-03-31T16:35:12.941Z","taskId":"13","category":"BUILD_FAILURE","check":"build","exitCode":127,"stdout":"\n> szechuan-royale-website@0.1.0 build\n> next build\n\n","stderr":"sh: 1: next: not found\n","round":1}
