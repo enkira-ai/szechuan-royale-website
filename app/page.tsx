@@ -1,5 +1,6 @@
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
+import WeeklySpecials from "./components/WeeklySpecials";
 import MenuHighlights from "./components/MenuHighlights";
 import OnlineOrderingBanner from "./components/OnlineOrderingBanner";
 import About from "./components/About";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <WeeklySpecials />
         <MenuHighlights />
         <Gallery />
         <OnlineOrderingBanner />
