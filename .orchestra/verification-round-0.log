@@ -1,0 +1,12 @@
+=== Verification Round 0 ===
+
+[FAILED] build (exit code 127)
+STDOUT:
+
+> szechuan-royale-website@0.1.0 build
+> next build
+
+
+STDERR:
+sh: 1: next: not found
+

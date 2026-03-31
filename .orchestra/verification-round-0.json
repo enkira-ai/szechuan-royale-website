@@ -1,0 +1,23 @@
+{
+  "allPassed": false,
+  "failedChecks": [
+    {
+      "check": "build",
+      "passed": false,
+      "exitCode": 127,
+      "stdout": "\n> szechuan-royale-website@0.1.0 build\n> next build\n\n",
+      "stderr": "sh: 1: next: not found\n",
+      "durationMs": 124,
+      "round": 0
+    }
+  ],
+  "build": {
+    "check": "build",
+    "passed": false,
+    "exitCode": 127,
+    "stdout": "\n> szechuan-royale-website@0.1.0 build\n> next build\n\n",
+    "stderr": "sh: 1: next: not found\n",
+    "durationMs": 124,
+    "round": 0
+  }
+}
