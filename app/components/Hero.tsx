@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const HERO_IMAGE = "/images/cda83e56-8acf-467e-b60a-68db04ccd765.jpeg";
+const HERO_IMAGE = "/images/facebook-hero.jpg";
 
 export default function Hero() {
   return (

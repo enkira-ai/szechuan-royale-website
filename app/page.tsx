@@ -1,10 +1,11 @@
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
-import MenuHighlights from "./components/MenuHighlights";
+import SignatureDishes from "./components/SignatureDishes";
+import PhotoMenuGallery from "./components/PhotoMenuGallery";
+import Gallery from "./components/Gallery";
 import OnlineOrderingBanner from "./components/OnlineOrderingBanner";
 import Testimonials from "./components/Testimonials";
 import About from "./components/About";
-import Gallery from "./components/Gallery";
 import LocationHours from "./components/LocationHours";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -17,7 +18,8 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <MenuHighlights />
+        <SignatureDishes />
+        <PhotoMenuGallery />
         <Gallery />
         <OnlineOrderingBanner />
         <Testimonials />
