@@ -21,6 +21,7 @@ export default function Gallery() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
+          gridAutoFlow: 'dense',
           gap: '0.75rem',
         }}>
           {photos.map((photo) => (

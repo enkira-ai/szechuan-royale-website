@@ -4,7 +4,7 @@ const dishes = [
   {
     name: "Sesame Chicken",
     price: 15.00,
-    image: "65014366_388857888396829_9191205497766674432_n.jpg",
+    image: "sesame-chicken.jpg",
     description: "Our most-loved dish. Tender chicken glazed in our chef's signature sesame sauce, finished with toasted sesame seeds over fresh broccoli.",
     badge: "#1 Most Ordered",
   },
