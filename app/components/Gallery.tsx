@@ -1,22 +1,7 @@
-const bannerPhotos = [
-  'new01.jpg',
-  'new02.jpg',
-  'new03.jpg',
-];
-
 const photos = [
-  'cda83e56-8acf-467e-b60a-68db04ccd765.jpeg',
-  'd23e3903-fe25-417b-bfa9-90e4be70ef4f.jpeg',
-  'dab21f61-e367-484f-bef9-68cdc7b9161f.jpeg',
-  '2c798a66-2764-4b77-b473-9dcd71f0e03d.jpeg',
-  '2dcf23b3-1cda-41b1-bd31-d28c97dc82be.jpeg',
-  '53d62e21-83b6-41ef-aceb-342dae1a1082.jpeg',
-  '85b7af50-058b-4aea-8b00-68c860cc5bbd.jpeg',
-  '792a6991-942b-4395-add0-3580b5640b1e.jpeg',
-  '42901bd9-9bfc-4941-bf28-a813e69c1905-2.jpeg',
-  '9682892b-d774-4772-b2a7-186be4e46035.jpeg',
-  'a12007c9-0c47-4219-9fd1-5b80644ed278.jpeg',
-  'bb73a62e-ef65-43c2-9ecb-8067968ea2a1.jpg',
+  { src: 'new01.jpg', alt: 'Szechuan Royale dining room with traditional Chinese murals' },
+  { src: 'new02.jpg', alt: 'Szechuan Royale interior with red lantern lighting' },
+  { src: 'new03.jpg', alt: 'Szechuan Royale elegant booth seating area' },
 ];
 
 export default function Gallery() {
@@ -26,41 +11,15 @@ export default function Gallery() {
 
         {/* Section Header */}
         <div className="text-center mb-14">
-          <span className="section-eyebrow">From Our Kitchen</span>
-          <h2 className="section-title text-4xl md:text-5xl mb-4">Gallery</h2>
+          <span className="section-eyebrow">Step Inside</span>
+          <h2 className="section-title text-4xl md:text-5xl mb-4">Our Restaurant</h2>
           <div className="section-rule section-rule-center" />
         </div>
 
-        {/* Featured banner images */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '0.5rem',
-          marginBottom: '0.5rem',
-        }}>
-          {bannerPhotos.map((photo, i) => (
-            <div
-              key={`banner-${i}`}
-              className="gallery-item gallery-frame"
-              style={{ aspectRatio: '4/3' }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`/images/${photo}`}
-                alt={`Szechuan Royale restaurant ${i + 1}`}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                loading="eager"
-              />
-              <div className="gallery-overlay" />
-            </div>
-          ))}
-        </div>
-
-        {/* Food photos grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '0.5rem',
+          gap: '0.75rem',
         }}>
           {photos.map((photo, i) => (
             <div
@@ -70,10 +29,10 @@ export default function Gallery() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/images/${photo}`}
-                alt={`Szechuan Royale dish ${i + 1}`}
+                src={`/images/${photo.src}`}
+                alt={photo.alt}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                loading={i < 8 ? 'eager' : 'lazy'}
+                loading="lazy"
               />
               <div className="gallery-overlay" />
             </div>
