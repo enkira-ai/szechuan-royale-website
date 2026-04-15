@@ -27,7 +27,7 @@ export default function Footer() {
             letterSpacing: '0.5em',
             color: '#D4AF37',
           }}>
-            四川皇家
+            鴻園
           </p>
         </div>
 
