@@ -1,6 +1,4 @@
-const MEALKEYWAY_URL = "https://order.mealkeyway.com/merchant/697a4f754551584c38385230584f427631595a526e413d3d/main";
-const GRUBHUB_URL = "https://www.grubhub.com/restaurant/szechuan-royale-470-schooleys-mountain-rd-ste-3-hackettstown/402532";
-const SEAMLESS_URL = "https://www.seamless.com/menu/szechuan-royale-470-schooleys-mountain-rd-ste-3-hackettstown/402532";
+import { ORDER_URL as MEALKEYWAY_URL, GRUBHUB_URL, SEAMLESS_URL } from '../config';
 
 export default function OnlineOrderingBanner() {
   return (

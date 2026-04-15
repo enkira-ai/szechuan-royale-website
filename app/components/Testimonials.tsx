@@ -1,4 +1,4 @@
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Szechuan+Royale/@40.8293369,-74.8218676,17z";
+import { GOOGLE_MAPS_URL } from '../config';
 
 const reviews = [
   {
@@ -79,7 +79,7 @@ export default function Testimonials() {
               color: '#F5E6C8',
               lineHeight: 1,
             }}>
-              4.8
+              5.0
             </span>
             <div>
               <Stars count={5} />
@@ -98,7 +98,7 @@ export default function Testimonials() {
         }}>
           {reviews.map((review, i) => (
             <a
-              key={i}
+              key={review.name}
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"

@@ -1,4 +1,4 @@
-const ORDER_URL = "https://order.mealkeyway.com/merchant/697a4f754551584c38385230584f427631595a526e413d3d/main";
+import { ORDER_URL } from '../config';
 
 const dishes = [
   {
@@ -42,7 +42,7 @@ export default function SignatureDishes() {
         }}>
           {dishes.map((dish, i) => (
             <a
-              key={i}
+              key={dish.name}
               href={ORDER_URL}
               target="_blank"
               rel="noopener noreferrer"

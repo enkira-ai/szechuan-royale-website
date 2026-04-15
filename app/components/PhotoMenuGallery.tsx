@@ -1,4 +1,4 @@
-const ORDER_URL = "https://order.mealkeyway.com/merchant/697a4f754551584c38385230584f427631595a526e413d3d/main";
+import { ORDER_URL } from '../config';
 
 const menuItems = [
   { name: "Pan Fried Dumplings", price: 9.00, image: "cda83e56-8acf-467e-b60a-68db04ccd765.jpeg", tag: "Popular", category: "Appetizers" },
@@ -43,7 +43,7 @@ export default function PhotoMenuGallery() {
         }}>
           {menuItems.map((item, i) => (
             <a
-              key={i}
+              key={item.name}
               href={ORDER_URL}
               target="_blank"
               rel="noopener noreferrer"
