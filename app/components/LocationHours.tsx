@@ -92,7 +92,7 @@ export default function LocationHours() {
             padding: 0,
           }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.8!2d-74.8378!3d40.8527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3783b0a5f6b8d%3A0x1234567890abcdef!2s470%20Schooleys%20Mountain%20Rd%2C%20Hackettstown%2C%20NJ%2007840!5e0!3m2!1sen!2sus!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.937480019685!2d-74.82186759999999!3d40.8293369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3848162a590d7%3A0x9ed65f6c8f51726a!2sSzechuan%20Royale!5e0!3m2!1sen!2sus!4v1732344356886"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '320px' }}

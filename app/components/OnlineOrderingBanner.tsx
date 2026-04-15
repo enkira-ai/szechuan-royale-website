@@ -88,7 +88,8 @@ export default function OnlineOrderingBanner() {
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem' }}>
           <a href={GRUBHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-banner-secondary">Grubhub</a>
           <a href={SEAMLESS_URL} target="_blank" rel="noopener noreferrer" className="btn-banner-secondary">Seamless</a>
-          <a href="tel:+19088504558" className="btn-banner-secondary">Call: (908) 850-4558 / 850-6062</a>
+          <a href="tel:+19088504558" className="btn-banner-secondary">Call: (908) 850-4558</a>
+          <a href="tel:+19088506062" className="btn-banner-secondary">Call: (908) 850-6062</a>
         </div>
       </div>
     </section>
