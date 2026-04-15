@@ -62,8 +62,8 @@ export default function About() {
               zIndex: 1,
             }}>
               <Image
-                src="/images/new01.jpg"
-                alt="Szechuan Royale Restaurant"
+                src="/images/staff.jpg"
+                alt="Szechuan Royale team"
                 fill
                 className="object-cover"
               />

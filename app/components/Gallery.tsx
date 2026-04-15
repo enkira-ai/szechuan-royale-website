@@ -1,7 +1,9 @@
 const photos = [
-  { src: 'new01.jpg', alt: 'Szechuan Royale dining room with traditional Chinese murals' },
-  { src: 'new02.jpg', alt: 'Szechuan Royale interior with red lantern lighting' },
-  { src: 'new03.jpg', alt: 'Szechuan Royale elegant booth seating area' },
+  { src: 'store-front.jpg', alt: 'Szechuan Royale storefront entrance', span: false },
+  { src: 'table.jpg', alt: 'Table full of signature dishes at Szechuan Royale', span: true },
+  { src: 'party-1.jpg', alt: 'Family enjoying dinner at Szechuan Royale', span: false },
+  { src: 'party-2.jpg', alt: 'Friends celebrating at Szechuan Royale', span: false },
+  { src: 'new03.jpg', alt: 'Szechuan Royale elegant booth seating area', span: false },
 ];
 
 export default function Gallery() {
@@ -18,14 +20,17 @@ export default function Gallery() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '0.75rem',
         }}>
-          {photos.map((photo, i) => (
+          {photos.map((photo) => (
             <div
-              key={i}
+              key={photo.src}
               className="gallery-item gallery-frame"
-              style={{ aspectRatio: '4/3' }}
+              style={{
+                aspectRatio: photo.span ? '2/1' : '4/3',
+                gridColumn: photo.span ? 'span 2' : 'span 1',
+              }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
