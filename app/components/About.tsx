@@ -62,7 +62,7 @@ export default function About() {
               zIndex: 1,
             }}>
               <Image
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=420&fit=crop"
+                src="/images/new01.jpg"
                 alt="Szechuan Royale Restaurant"
                 fill
                 className="object-cover"

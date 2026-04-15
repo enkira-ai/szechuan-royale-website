@@ -26,6 +26,8 @@ export default function Contact() {
         <div className="text-center mb-8 space-y-2">
           <p className="text-lg">
             <a href="tel:9088504558" className="text-imperial hover:text-gold">(908) 850-4558</a>
+            {" / "}
+            <a href="tel:9088506062" className="text-imperial hover:text-gold">(908) 850-6062</a>
           </p>
           <p className="text-lg">
             <span className="text-xl">✉️</span>{" "}

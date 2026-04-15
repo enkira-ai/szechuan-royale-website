@@ -17,6 +17,7 @@ export default function Navigation() {
     { label: "Gallery",  href: "#gallery" },
     { label: "About",    href: "#about" },
     { label: "Location", href: "#location" },
+    { label: "Contact",  href: "#contact" },
   ];
 
   return (
@@ -61,7 +62,7 @@ export default function Navigation() {
                 lineHeight: 1.6,
               }}
             >
-              四川皇家
+              鴻園
             </span>
           </a>
 

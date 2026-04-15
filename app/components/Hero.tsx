@@ -74,7 +74,7 @@ export default function Hero() {
             marginBottom: '1.5rem',
           }}
         >
-          四川皇家
+          鴻園
         </p>
 
         {/* Tagline */}
