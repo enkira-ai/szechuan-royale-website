@@ -1,6 +1,6 @@
 const MEALKEYWAY_URL = "https://order.mealkeyway.com/merchant/697a4f754551584c38385230584f427631595a526e413d3d/main";
-const GRUBHUB_URL = "https://www.grubhub.com";
-const DOORDASH_URL = "https://www.doordash.com";
+const GRUBHUB_URL = "https://www.grubhub.com/restaurant/szechuan-royale-470-schooleys-mountain-rd-ste-3-hackettstown/402532";
+const SEAMLESS_URL = "https://www.seamless.com/menu/szechuan-royale-470-schooleys-mountain-rd-ste-3-hackettstown/402532";
 
 export default function OnlineOrderingBanner() {
   return (
@@ -87,8 +87,8 @@ export default function OnlineOrderingBanner() {
         {/* Secondary platforms */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem' }}>
           <a href={GRUBHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-banner-secondary">Grubhub</a>
-          <a href={DOORDASH_URL} target="_blank" rel="noopener noreferrer" className="btn-banner-secondary">DoorDash</a>
-          <a href="tel:+19088504558" className="btn-banner-secondary">Call: (908) 850-4558</a>
+          <a href={SEAMLESS_URL} target="_blank" rel="noopener noreferrer" className="btn-banner-secondary">Seamless</a>
+          <a href="tel:+19088504558" className="btn-banner-secondary">Call: (908) 850-4558 / 850-6062</a>
         </div>
       </div>
     </section>

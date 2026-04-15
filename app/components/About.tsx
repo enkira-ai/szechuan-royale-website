@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <section id="about" className="py-24 bg-ink">
@@ -61,11 +59,11 @@ export default function About() {
               border: '1px solid rgba(212,175,55,0.3)',
               zIndex: 1,
             }}>
-              <Image
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=420&fit=crop"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/new01.jpg"
                 alt="Szechuan Royale Restaurant"
-                fill
-                className="object-cover"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               {/* Warm tint overlay */}
               <div style={{

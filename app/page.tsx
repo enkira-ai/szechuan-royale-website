@@ -2,6 +2,7 @@ import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import MenuHighlights from "./components/MenuHighlights";
 import OnlineOrderingBanner from "./components/OnlineOrderingBanner";
+import Testimonials from "./components/Testimonials";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import LocationHours from "./components/LocationHours";
@@ -19,6 +20,7 @@ export default function Home() {
         <MenuHighlights />
         <Gallery />
         <OnlineOrderingBanner />
+        <Testimonials />
         <About />
         <LocationHours />
         <Contact />

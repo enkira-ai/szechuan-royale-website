@@ -42,6 +42,10 @@ export default function LocationHours() {
               <a href="tel:+19088504558" className="link-phone" style={{ fontSize: '1rem', letterSpacing: '0.05em' }}>
                 (908) 850-4558
               </a>
+              <span style={{ color: '#8A7968', margin: '0 0.5rem' }}>/</span>
+              <a href="tel:+19088506062" className="link-phone" style={{ fontSize: '1rem', letterSpacing: '0.05em' }}>
+                (908) 850-6062
+              </a>
             </div>
 
             {/* Hours card */}
@@ -81,52 +85,22 @@ export default function LocationHours() {
             </a>
           </div>
 
-          {/* Right column: map panel */}
+          {/* Right column: Google Maps embed */}
           <div className="highlight-card" style={{
             minHeight: '320px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '3rem 2rem',
-            gap: '1.5rem',
-            textAlign: 'center',
+            overflow: 'hidden',
+            padding: 0,
           }}>
-            {/* Pin icon */}
-            <div style={{
-              width: '52px',
-              height: '52px',
-              borderRadius: '50%',
-              background: 'rgba(204,17,0,0.1)',
-              border: '1px solid rgba(204,17,0,0.28)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <svg width="22" height="22" fill="none" stroke="#CC1100" strokeWidth="1.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                <circle cx="12" cy="9" r="2.5" />
-              </svg>
-            </div>
-
-            <div>
-              <p style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
-                fontWeight: 700,
-                fontSize: '1.25rem',
-                color: '#D4AF37',
-                marginBottom: '0.5rem',
-              }}>
-                Szechuan Royale
-              </p>
-              <p style={{ color: '#8A7968', fontSize: '0.875rem', lineHeight: 1.7 }}>
-                470 Schooleys Mountain Rd<br />Hackettstown, NJ 07840
-              </p>
-            </div>
-
-            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="btn-crimson" style={{ fontSize: '0.8rem', padding: '0.6rem 1.5rem' }}>
-              Open in Google Maps
-            </a>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.8!2d-74.8378!3d40.8527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3783b0a5f6b8d%3A0x1234567890abcdef!2s470%20Schooleys%20Mountain%20Rd%2C%20Hackettstown%2C%20NJ%2007840!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '320px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Szechuan Royale location on Google Maps"
+            />
           </div>
         </div>
       </div>

@@ -1,3 +1,9 @@
+const bannerPhotos = [
+  'new01.jpg',
+  'new02.jpg',
+  'new03.jpg',
+];
+
 const photos = [
   'cda83e56-8acf-467e-b60a-68db04ccd765.jpeg',
   'd23e3903-fe25-417b-bfa9-90e4be70ef4f.jpeg',
@@ -25,6 +31,32 @@ export default function Gallery() {
           <div className="section-rule section-rule-center" />
         </div>
 
+        {/* Featured banner images */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '0.5rem',
+          marginBottom: '0.5rem',
+        }}>
+          {bannerPhotos.map((photo, i) => (
+            <div
+              key={`banner-${i}`}
+              className="gallery-item gallery-frame"
+              style={{ aspectRatio: '4/3' }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/images/${photo}`}
+                alt={`Szechuan Royale restaurant ${i + 1}`}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                loading="eager"
+              />
+              <div className="gallery-overlay" />
+            </div>
+          ))}
+        </div>
+
+        {/* Food photos grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
